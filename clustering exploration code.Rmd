@@ -1,0 +1,156 @@
+---
+title: "clustering dataset"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+full dataset analysis
+```{r}
+getwd()
+setwd("C:/Users/Laurens/Downloads")
+
+df <- read_csv("rawtrips3_prepared2_clustered2 (1).csv")
+
+prop.table(table(df$insurance))
+
+mean(df$tripduration) #6.4
+
+tt4 <- table(df$car)
+prop.table(tt4) #20.5% car
+
+prop.table(table(df$hotel)) 
+
+mean(df$purchaseLag) #14.44
+
+prop.table(table(df$registered))
+  
+```
+
+
+cluster0 analysis
+```{r}
+cluster0 <- df %>%
+  filter(cluster_labels=='cluster_0')
+
+mean(cluster3$age) 
+
+prop.table(table(cluster0$children))
+
+prop.table(table(cluster0$seats))
+
+prop.table(table(cluster0$gender))
+
+mean(cluster0$tripduration) 
+
+mean(cluster0$purchaseLag)
+
+prop.table(table(cluster0$car))
+
+prop.table(table(cluster0$insurance))
+
+prop.table(table(cluster0$hotel)) 
+
+prop.table(table(cluster0$departuremonth))
+
+prop.table(table(cluster0$summerdeparture))
+
+prop.table(table(cluster0$weekenddeparture))
+```
+
+cluster1 analysis
+```{r}
+cluster1 <- df %>%
+  filter(cluster_labels=='cluster_1')
+
+mean(cluster1$age) 
+
+prop.table(table(cluster1$children))
+
+prop.table(table(cluster1$seats))
+
+prop.table(table(cluster1$gender))
+
+mean(cluster1$tripduration) 
+
+mean(cluster1$purchaseLag)
+
+prop.table(table(cluster1$car))
+
+prop.table(table(cluster1$insurance))
+
+prop.table(table(cluster1$hotel)) 
+
+prop.table(table(cluster1$departuremonth))
+
+prop.table(table(cluster1$summerdeparture))
+
+prop.table(table(cluster1$weekenddeparture))
+
+```
+
+cluster2 analysis
+```{r}
+cluster2 <- df %>%
+  filter(cluster_labels=='cluster_2')
+
+mean(cluster2$age) 
+
+prop.table(table(cluster2$children))
+
+prop.table(table(cluster2$seats))
+
+prop.table(table(cluster2$gender))
+
+mean(cluster2$tripduration) 
+
+mean(cluster2$purchaseLag)
+
+prop.table(table(cluster2$car))
+
+prop.table(table(cluster2$insurance))
+
+prop.table(table(cluster2$hotel)) 
+
+prop.table(table(cluster2$departuremonth))
+
+prop.table(table(cluster2$summerdeparture))
+
+prop.table(table(cluster2$weekenddeparture))
+```
+
+
+Cluster3
+```{r}
+cluster3 <- df %>%
+  filter(cluster_labels=='cluster_3')
+
+mean(cluster3$age) 
+
+prop.table(table(cluster3$children))
+
+prop.table(table(cluster3$seats))
+
+prop.table(table(cluster3$gender))
+
+mean(cluster3$tripduration) 
+
+mean(cluster3$purchaseLag)
+
+prop.table(table(cluster3$car))
+
+prop.table(table(cluster3$insurance))
+
+prop.table(table(cluster3$hotel)) 
+
+prop.table(table(cluster3$departuremonth))
+
+prop.table(table(cluster3$summerdeparture))
+
+prop.table(table(cluster3$weekenddeparture))
+
+
+```
+
