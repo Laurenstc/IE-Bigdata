@@ -1,7 +1,5 @@
 ---
-title: "Assignment - GROUP F"
-author: Fergus Buckley, Javier Contreras, Ryan Hayashino, Karim El Shammaa, Richard
-  Rohla, Cedric Viret, Laurens Doedes Breuning ten Cate
+title: "Global Terrorism Analysis"
 output:
   html_document:
     number_sections: no
